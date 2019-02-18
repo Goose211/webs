@@ -124,6 +124,7 @@ end
 get '/tasks/over' do
   @lists = List.all
   @tasks = current_user.tasks.due_over
+  erb :index
 end
 
 get '/tasks/done' do
